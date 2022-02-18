@@ -1,0 +1,182 @@
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/*=====================================================
+# common
+===================================================== */
+.btn {
+  background: #8e8eae;
+  display: block;
+}
+
+.contents {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 3.4rem;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  position: relative;
+  border-bottom: 30px;
+}
+
+/*=====================================================
+# header
+===================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: #fff;
+  height: 90px;
+  width: 100%;
+}
+.header__inner {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+}
+.header__logo {
+  width: 100px;
+}
+.header__icon {
+  margin-left: auto;
+  display: flex;
+}
+.header__icon li {
+  width: 20px;
+}
+
+/*=====================================================
+# top
+===================================================== */
+.top {
+  background: url(/img/shadow-blue.png) no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+}
+.top__content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 180px;
+  z-index: 10;
+}
+.top__main-title {
+  font-size: 5rem;
+  margin-bottom: 40px;
+}
+.top__sub-title {
+  font-size: 2.4rem;
+  margin-bottom: 46px;
+}
+.top__left {
+  background: url(/img/onne-beauty-piBorUFXHhU-unsplash\ 1.png) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 925px;
+}
+
+.concept-goods {
+  padding: 120px 15px;
+}
+
+/*=====================================================
+# concept
+===================================================== */
+.concept__contents {
+  display: flex;
+  align-items: center;
+}
+.concept__img {
+  flex: 0 0 590px;
+}
+.concept__content {
+  padding: 80px 50px;
+  background: #fff;
+  z-index: 2;
+  transform: translateX(-50px);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.07);
+}
+.concept__message {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/*=====================================================
+# goods
+===================================================== */
+.card {
+  display: flex;
+}
+.card__item {
+  width: calc(33.3% - 40px);
+}
+.card__item + .card__item {
+  margin-left: 60px;
+}
+.card__img {
+  margin-bottom: 20px;
+}
+.card__title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+.card__text {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.card__description {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+/*=====================================================
+# flow
+===================================================== */
+.flow {
+  background: #eaf0f9;
+  padding: 60px 180px;
+}
+
+.flow-content {
+  background: #fff;
+  padding: 60px 70px;
+}
+
+.flow-item {
+  width: calc(33.3% - 53.3333333333px);
+}
+.flow-item + .flow-item {
+  margin-left: 80px;
+}
+.flow-item__img {
+  width: 150px;
+  background: #c0c0c0;
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 17px;
+}
+
+.number {
+  font-size: 70px;
+  color: #8e8eae;
+}
