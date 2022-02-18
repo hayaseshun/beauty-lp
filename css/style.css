@@ -164,6 +164,17 @@ body {
 
 .flow-item {
   width: calc(33.3% - 53.3333333333px);
+  position: relative;
+}
+.flow-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  background: url(/img/Polygon\ 1.png);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 50px;
+  top: 100px;
+  right: -74px;
 }
 .flow-item + .flow-item {
   margin-left: 80px;
