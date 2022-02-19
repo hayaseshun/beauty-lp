@@ -196,3 +196,26 @@ body {
   font-size: 70px;
   color: #8e8eae;
 }
+
+/*=====================================================
+# news
+===================================================== */
+.news-content {
+  width: 940px;
+  margin: 0 auto;
+}
+.news {
+  &__list {
+  }
+  &__item {
+    a {
+      display: flex;
+      color: #333333;
+      padding: 40px 0;
+      border-bottom: 1px solid #e3e3e3;
+    }
+  }
+  &__date {
+    margin-right: 60px;
+  }
+}
