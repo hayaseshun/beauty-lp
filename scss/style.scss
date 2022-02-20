@@ -1,19 +1,7 @@
 @charset "utf-8";
 
-/* ブレークポイント */
-$breakpoints: (
-  //キー: 値
-  "sm": "screen and (max-width: 767px)",
-  "pc": "screen and (min-width: 768px)"
-) !default;
-
-//メディアクエリー
-@mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
+@use "./foundation/_mixin";
+@use "./layout/_header";
 html {
   font-size: 62.5%;
 }
@@ -22,7 +10,7 @@ img {
 }
 body {
   font-size: 1.6rem;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     font-size: 1.4rem;
   }
 }
@@ -63,50 +51,18 @@ body {
   text-align: center;
 }
 /*=====================================================
-# header
-===================================================== */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 10;
-  background: #fff;
-  height: 90px;
-  width: 100%;
-  @include mq(sm) {
-    height: 60px;
-  }
-  &__inner {
-    width: 1180px;
-    margin: 0 auto;
-    display: flex;
-  }
-  &__logo {
-    width: 100px;
-  }
-  &__icon {
-    margin-left: auto;
-    display: flex;
-    li {
-      width: 20px;
-    }
-  }
-}
-
-/*=====================================================
 # top
 ===================================================== */
 .top {
   background: url(/img/shadow-blue.png) no-repeat center center/cover;
   height: 100vh;
   position: relative;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     height: 270px;
     margin-top: 60px;
   }
   &__content {
-    @include mq(pc) {
+    @include mixin.mq(pc) {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -142,7 +98,7 @@ body {
 .concept {
   &__contents {
     align-items: center;
-    @include mq(pc) {
+    @include mixin.mq(pc) {
       display: flex;
     }
   }
@@ -156,10 +112,10 @@ body {
     background: #fff;
     z-index: 2;
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.07);
-    @include mq(pc) {
+    @include mixin.mq(pc) {
       transform: translateX(-50px);
     }
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       padding: 25px;
       transform: translateY(-10%);
       margin: 0 10px;
@@ -179,15 +135,15 @@ body {
   margin-top: 120px;
 }
 .card {
-  @include mq(pc) {
+  @include mixin.mq(pc) {
     display: flex;
   }
   &__item {
-    @include mq(pc) {
+    @include mixin.mq(pc) {
       width: calc(33.3% - 60px * 2 / 3);
     }
     & + & {
-      @include mq(pc) {
+      @include mixin.mq(pc) {
         margin-left: 60px;
       }
     }
@@ -217,7 +173,7 @@ body {
 .flow {
   background: #eaf0f9;
   padding: 60px 180px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 50px 20px;
   }
 }
@@ -225,7 +181,7 @@ body {
 .flow-content {
   background: #fff;
   padding: 60px 70px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 50px 38px;
   }
   .btn-large {
@@ -235,14 +191,14 @@ body {
 
 .flow-item {
   position: relative;
-  @include mq(pc) {
+  @include mixin.mq(pc) {
     width: calc(33.3% - 80px * 2 / 3);
   }
   &:not(:last-child) {
     &::after {
       content: "";
       position: absolute;
-      @include mq(pc) {
+      @include mixin.mq(pc) {
         background: url(/img/Polygon\ 1.png);
         background-repeat: no-repeat;
         width: 30px;
@@ -250,7 +206,7 @@ body {
         top: 120px;
         right: -74px;
       }
-      @include mq(sm) {
+      @include mixin.mq(sm) {
         background: url(/img/Polygon-bottom.png) no-repeat center center/cover;
         width: 50px;
         height: 30px;
@@ -258,12 +214,12 @@ body {
         transform: translateX(-50%);
       }
     }
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       margin-bottom: 90px;
     }
   }
   & + & {
-    @include mq(pc) {
+    @include mixin.mq(pc) {
       margin-left: 80px;
     }
   }
@@ -289,8 +245,13 @@ body {
 }
 .news {
   padding: 120px;
-  @include mq(sm) {
+  @include mixin.mq(sm) {
     padding: 100px 20px;
+  }
+  .btn-small {
+    max-width: 420px;
+    text-align: center;
+    margin: 60px auto 0;
   }
   &__list {
   }
@@ -304,7 +265,7 @@ body {
   }
   &__date {
     margin-right: 60px;
-    @include mq(sm) {
+    @include mixin.mq(sm) {
       margin-right: 16px;
     }
   }

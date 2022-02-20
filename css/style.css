@@ -1,5 +1,39 @@
 @charset "UTF-8";
 /* ブレークポイント */
+/*=====================================================
+# header
+===================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: #fff;
+  height: 90px;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    height: 60px;
+  }
+}
+.header__inner {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+}
+.header__logo {
+  width: 100px;
+}
+.header__icon {
+  margin-left: auto;
+  display: flex;
+}
+.header__icon li {
+  width: 20px;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -56,40 +90,6 @@ body {
 
 .center {
   text-align: center;
-}
-
-/*=====================================================
-# header
-===================================================== */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 10;
-  background: #fff;
-  height: 90px;
-  width: 100%;
-}
-@media screen and (max-width: 767px) {
-  .header {
-    height: 60px;
-  }
-}
-.header__inner {
-  width: 1180px;
-  margin: 0 auto;
-  display: flex;
-}
-.header__logo {
-  width: 100px;
-}
-.header__icon {
-  margin-left: auto;
-  display: flex;
-}
-.header__icon li {
-  width: 20px;
 }
 
 /*=====================================================
@@ -307,6 +307,11 @@ body {
   .news {
     padding: 100px 20px;
   }
+}
+.news .btn-small {
+  max-width: 420px;
+  text-align: center;
+  margin: 60px auto 0;
 }
 .news__item a {
   display: flex;
