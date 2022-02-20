@@ -59,6 +59,9 @@ body {
   position: relative;
   border-bottom: 30px;
 }
+.center {
+  text-align: center;
+}
 /*=====================================================
 # header
 ===================================================== */
@@ -172,6 +175,9 @@ body {
 /*=====================================================
 # goods
 ===================================================== */
+.goods {
+  margin-top: 120px;
+}
 .card {
   @include mq(pc) {
     display: flex;
@@ -282,6 +288,10 @@ body {
   max-width: 940px;
 }
 .news {
+  padding: 120px;
+  @include mq(sm) {
+    padding: 100px 20px;
+  }
   &__list {
   }
   &__item {
@@ -294,5 +304,8 @@ body {
   }
   &__date {
     margin-right: 60px;
+    @include mq(sm) {
+      margin-right: 16px;
+    }
   }
 }

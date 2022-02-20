@@ -54,6 +54,10 @@ body {
   border-bottom: 30px;
 }
 
+.center {
+  text-align: center;
+}
+
 /*=====================================================
 # header
 ===================================================== */
@@ -172,6 +176,10 @@ body {
 /*=====================================================
 # goods
 ===================================================== */
+.goods {
+  margin-top: 120px;
+}
+
 @media screen and (min-width: 768px) {
   .card {
     display: flex;
@@ -292,6 +300,14 @@ body {
   max-width: 940px;
 }
 
+.news {
+  padding: 120px;
+}
+@media screen and (max-width: 767px) {
+  .news {
+    padding: 100px 20px;
+  }
+}
 .news__item a {
   display: flex;
   color: #333333;
@@ -300,4 +316,9 @@ body {
 }
 .news__date {
   margin-right: 60px;
+}
+@media screen and (max-width: 767px) {
+  .news__date {
+    margin-right: 16px;
+  }
 }
