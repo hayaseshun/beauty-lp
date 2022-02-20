@@ -24,6 +24,20 @@ body {
   background: #8e8eae;
   display: block;
 }
+.btn a {
+  color: #fff;
+}
+
+.btn-large {
+  padding: 25px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-small {
+  padding: 17px 30px;
+}
 
 .contents {
   max-width: 1080px;
@@ -53,6 +67,11 @@ body {
   height: 90px;
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .header {
+    height: 60px;
+  }
+}
 .header__inner {
   width: 1180px;
   margin: 0 auto;
@@ -80,7 +99,7 @@ body {
 @media screen and (max-width: 767px) {
   .top {
     height: 270px;
-    margin-top: 90px;
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -141,6 +160,8 @@ body {
 @media screen and (max-width: 767px) {
   .concept__content {
     padding: 25px;
+    transform: translateY(-10%);
+    margin: 0 10px;
   }
 }
 .concept__message {
@@ -201,6 +222,15 @@ body {
   background: #fff;
   padding: 60px 70px;
 }
+@media screen and (max-width: 767px) {
+  .flow-content {
+    padding: 50px 38px;
+  }
+}
+.flow-content .btn-large {
+  margin: 60px auto 0;
+}
+
 .flow-item {
   position: relative;
 }
@@ -212,12 +242,30 @@ body {
 .flow-item:not(:last-child)::after {
   content: "";
   position: absolute;
-  background: url(/img/Polygon\ 1.png);
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 50px;
-  top: 120px;
-  right: -74px;
+}
+@media screen and (min-width: 768px) {
+  .flow-item:not(:last-child)::after {
+    background: url(/img/Polygon\ 1.png);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 50px;
+    top: 120px;
+    right: -74px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .flow-item:not(:last-child)::after {
+    background: url(/img/Polygon-bottom.png) no-repeat center center/cover;
+    width: 50px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .flow-item:not(:last-child) {
+    margin-bottom: 90px;
+  }
 }
 @media screen and (min-width: 768px) {
   .flow-item + .flow-item {
@@ -241,7 +289,7 @@ body {
 # news
 ===================================================== */
 .news-content {
-  width: 940px;
+  max-width: 940px;
 }
 
 .news__item a {
